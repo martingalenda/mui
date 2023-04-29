@@ -10,15 +10,15 @@ import Utils from "./pages/Utils"
 
 const AppRouter = () => {
     return (
-        <Routes>
-            <Route path="/" element={<Inputs/>}/>
-            <Route path="/inputs" element={<Inputs/>}/>
-            <Route path="/data_display" element={<DataDisplay/>}/>
-            <Route path="/feedback" element={<FeedbackMUI/>}/>
-            <Route path="/surfaces" element={<Surfaces/>}/>
-            <Route path="/navigation" element={<Navigation/>}/>
-            <Route path="/layout" element={<Layout/>}/>
-            <Route path="/utils" element={<Utils/>}/>
+        <Routes basename="/mui">
+            <Route path="/mui/" element={<Inputs/>}/>
+            <Route path="/mui/inputs" element={<Inputs/>}/>
+            <Route path="/mui/data_display" element={<DataDisplay/>}/>
+            <Route path="/mui/feedback" element={<FeedbackMUI/>}/>
+            <Route path="/mui/surfaces" element={<Surfaces/>}/>
+            <Route path="/mui/navigation" element={<Navigation/>}/>
+            <Route path="/mui/layout" element={<Layout/>}/>
+            <Route path="/mui/utils" element={<Utils/>}/>
         </Routes>
     )
  }
