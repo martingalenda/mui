@@ -24,13 +24,13 @@ const Nav = () => {
             >
               <Grid item>
                 <Stack direction="row" spacing={2} >
-                  <Button component={Link} to="/inputs" variant="text" sx={{color: 'white'}}>Inputs</Button>
-                  <Button component={Link} to="/data_display" variant="text" sx={{color: 'white'}}>Data Display</Button>
-                  <Button component={Link} to="/feedback" variant="text" sx={{color: 'white'}}>Feedback</Button>
-                  <Button component={Link} to="/surfaces" variant="text" sx={{color: 'white'}}>Surfaces</Button>
-                  <Button component={Link} to="/navigation" variant="text" sx={{color: 'white'}}>Navigation</Button>
-                  <Button component={Link} to="/layout" variant="text" sx={{color: 'white'}}>Layout</Button>         
-                  <Button component={Link} to="/utils" variant="text" sx={{color: 'white'}}>Utils</Button>
+                  <Button component={Link} to="/mui/inputs/" variant="text" sx={{color: 'white'}}>Inputs</Button>
+                  <Button component={Link} to="/mui/data_display/" variant="text" sx={{color: 'white'}}>Data Display</Button>
+                  <Button component={Link} to="/mui/feedback/" variant="text" sx={{color: 'white'}}>Feedback</Button>
+                  <Button component={Link} to="/mui/surfaces/" variant="text" sx={{color: 'white'}}>Surfaces</Button>
+                  <Button component={Link} to="/mui/navigation/" variant="text" sx={{color: 'white'}}>Navigation</Button>
+                  <Button component={Link} to="/mui/layout/" variant="text" sx={{color: 'white'}}>Layout</Button>         
+                  <Button component={Link} to="/mui/utils/" variant="text" sx={{color: 'white'}}>Utils</Button>
                 </Stack>
               </Grid>
             </Grid>
