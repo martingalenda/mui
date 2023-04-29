@@ -10,7 +10,7 @@ import Utils from "./pages/Utils"
 
 const AppRouter = () => {
     return (
-        <Routes>
+        <Routes basename="/mui">
             <Route path="/mui/" element={<Inputs/>}/>
             <Route path="/mui/inputs" element={<Inputs/>}/>
             <Route path="/mui/data_display" element={<DataDisplay/>}/>
