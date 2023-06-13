@@ -141,38 +141,74 @@ const theme = createTheme({
           fontWeight: '600',
           letterSpacing: '0',
           lineHeight: '1.2',
+        },
+        // ! Botones
+        button: {
+          fontSize: '1em',
+          fontWeight: '600',
+          letterSpacing: '0',
+          lineHeight: '1.2',
+          textTransform: 'capitalize',
+          color: primary.white,
         }
     },
 
     // * Componentes *
     components: {
+        // ! Botones
         MuiButton: {
             defaultProps: {
-                style:{
-                    padding: "0.5em 3em",
-                    fontWeight: 'bold'
+                style: {
+                    padding: "0.563em 1.25em",
+                    fontWeight: 'bold',
+                    borderRadius: '0.313em',
+                    gap: '0.625em',
+                    boxShadow: 'none',
                 }
             },
             variants: [
                 {
-                  props: { variant: 'contained' },
-                  style: {
-                    color: '#101010', 
-  
-                  },
+                    props: { variant: 'contained' },
+                    style: {
+                      '&:focus': {
+                        border: `0.188em solid ${primary.darkBlue}`,
+                        outline: 'none',
+                      },
+                    },
                 },
                 {
-                    props: { variant: 'gradient' },
+                    props: { variant: 'contained', disabled: true },
                     style: {
-                      background: 'linear-gradient(to right, #FFC371, #FF5F6D)',
-                      color: '#101010',
-                      '&:hover': {
-                        background: 'linear-gradient(to right, #FF5F6D, #FFC371)',
+                        color: `${primary.white} !important`,
+                        background: primary.gray3,
+                    },
+                },
+                {
+                    props: { variant: 'outlined' },
+                    style: {
+                        '&:hover': {
+                          background: primary.instBlue,
+                          color: primary.white,
+                        },
+                        '&:focus': {
+                          background: 'none',
+                          color: primary.instBlue,
+                          border: `0.188em solid ${primary.darkBlue}`,
+                        },
                       },
+                },
+                {
+                    props: { variant: 'outlined', disabled: true },
+                    style: {
+                        color: primary.gray3,
+                        border: `0.063em solid ${primary.gray3}`,
                     },
                 },
             ],
         },
+
+
+
         MuiFab: {
           variants: [
             {

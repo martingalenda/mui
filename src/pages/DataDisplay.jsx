@@ -41,7 +41,7 @@ const DataDisplay = () => {
             <Typography variant="h3" align="center">Divider</Typography>
                 <Link style={{color: '#2e74d7'}} to="https://mui.com/material-ui/react-divider/" target="_blank">Doc</Link>
             </Box>
-                      <br/>
+          <br/>
           <br/>
           <DividerMUI/>
           <br/>
@@ -97,7 +97,7 @@ const DataDisplay = () => {
           <br/>
 
           <Typography align="center">
-          Existen más relacionados a esta tematica, como ser: <br/>
+          Existen más relacionados a esta tematica, como ser: <br/> <br/>
                 <Link style={{color: '#2e74d7'}} to="https://mui.com/material-ui/react-chip/" target="_blank">Chip</Link> <br/>
                 <Link style={{color: '#2e74d7'}} to="https://mui.com/material-ui/icons/" target="_blank">Icons</Link> <br/>
                 <Link style={{color: '#2e74d7'}} to="https://mui.com/material-ui/material-icons/" target="_blank">Material Icons</Link> <br/>
