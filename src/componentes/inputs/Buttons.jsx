@@ -18,20 +18,20 @@ const Buttons = () => {
         <br/>
         <Box sx={{display: 'flex', justifyContent: 'center', gap: 4, m: 5}}>
           <Button variant="contained">Contained</Button>
-          <Button variant="text">Text</Button>
+          <Button variant="contained" startIcon={<SendIcon />}>Send</Button>
+          <Button variant="contained" disabled>Disabled</Button>
+          {/* <Button variant="text">Text</Button> */}
           <Button variant="outlined">Outlined</Button>
-          <Button variant="gradient">Gradient</Button> {/* Version custom */}
+          <Button variant="outlined" disabled>Disabled</Button>
+          {/* <Button variant="gradient">Gradient</Button> */} {/* Version custom */}
+          <Button variant="outlined" startIcon={<SendIcon />}>
+            Send
+          </Button>
           <IconButton color="secondary" aria-label="add an alarm">
             <AlarmIcon />
           </IconButton>
-          <Button variant="outlined" endIcon={<SendIcon />}>
-            Send
-        </Button>
         </Box>
         <br/>
-        <Box sx={{width: '50%', margin: 'auto'}}>
-          <Button fullWidth variant="outlined">Full Width</Button> {/* Ancho completo */} 
-        </Box>
           
           <br/>
           <br/>
