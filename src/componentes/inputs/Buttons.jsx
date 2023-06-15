@@ -27,11 +27,27 @@ const Buttons = () => {
           <Button variant="outlined" startIcon={<SendIcon />}>
             Send
           </Button>
+          <IconButton color="primary" aria-label="add an alarm">
+            <AlarmIcon />
+          </IconButton>
+        </Box>
+          <br/>
+        <Box sx={{display: 'flex', justifyContent: 'center', gap: 4, m: 5}}>
+          <Button color="secondary" variant="contained">Contained</Button>
+          <Button color="secondary" variant="contained" startIcon={<SendIcon />}>Send</Button>
+          <Button color="secondary" variant="contained" disabled>Disabled</Button>
+          {/* <Button variant="text">Text</Button> */}
+          <Button color="secondary" variant="outlined">Outlined</Button>
+          <Button color="secondary" variant="outlined" disabled>Disabled</Button>
+          {/* <Button variant="gradient">Gradient</Button> */} {/* Version custom */}
+          <Button color="secondary" variant="outlined" startIcon={<SendIcon />}>
+            Send
+          </Button>
           <IconButton color="secondary" aria-label="add an alarm">
             <AlarmIcon />
           </IconButton>
         </Box>
-        <br/>
+      
           
           <br/>
           <br/>

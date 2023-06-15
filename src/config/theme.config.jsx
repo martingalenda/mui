@@ -4,7 +4,12 @@ import {CssBaseline} from "@mui/material";
 
 import PropTypes from 'prop-types';
 
-import {primary, secondary, states} from './palette.config' 
+import {primary, secondary, states} from './palette.config';
+
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import CancelIcon from '@mui/icons-material/Cancel'; 
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 const theme = createTheme({
     // * Colores *
@@ -18,11 +23,11 @@ const theme = createTheme({
         light: primary.lightBlue,
         main: primary.instBlue,
         dark: primary.darkBlue,
-        gray1: primary.gray1,
       },
       secondary: {
-        main: '#c75154',
-        dark: '#fe6d71'
+        light: secondary.lightRed,
+        main: secondary.baseRed,
+        dark: secondary.darkRed
       },
       text: {
         primary: primary.gray1,
@@ -119,6 +124,7 @@ const theme = createTheme({
           letterSpacing: '0',
           lineHeight: '1.2',
         },
+
         // Texto resaltado - Texto datos relevantes
         body1SB: {
           fontSize: '0.75em',
@@ -164,38 +170,39 @@ const theme = createTheme({
                     borderRadius: '0.313em',
                     gap: '0.625em',
                     boxShadow: 'none',
-                }
+                },
+            },
+            styleOverrides: {
+              outlined: ({ theme: currentTheme, ownerState }) => ({
+                ...(ownerState.color && ownerState.color !== 'inherit' && {
+                  '&:hover': {
+                    backgroundColor: currentTheme.palette[ownerState.color].dark,
+                    background: currentTheme.palette[ownerState.color].main,
+                    color: primary.white,
+                  },
+                  '&:focus': {
+                    background: 'none',
+                    color: currentTheme.palette[ownerState.color].main,
+                    border: `0.188em solid ${currentTheme.palette[ownerState.color].dark}`,
+                  },
+                })
+              }),
+              contained: ({ theme: currentTheme, ownerState }) => ({
+                ...(ownerState.color && ownerState.color !== 'inherit' && {
+                  '&:focus': {
+                    border: `0.188em solid ${currentTheme.palette[ownerState.color].dark}`,
+                    outline: 'none',
+                  },
+                })
+              }),
             },
             variants: [
-                {
-                    props: { variant: 'contained' },
-                    style: {
-                      '&:focus': {
-                        border: `0.188em solid ${primary.darkBlue}`,
-                        outline: 'none',
-                      },
-                    },
-                },
                 {
                     props: { variant: 'contained', disabled: true },
                     style: {
                         color: `${primary.white} !important`,
                         background: primary.gray3,
                     },
-                },
-                {
-                    props: { variant: 'outlined' },
-                    style: {
-                        '&:hover': {
-                          background: primary.instBlue,
-                          color: primary.white,
-                        },
-                        '&:focus': {
-                          background: 'none',
-                          color: primary.instBlue,
-                          border: `0.188em solid ${primary.darkBlue}`,
-                        },
-                      },
                 },
                 {
                     props: { variant: 'outlined', disabled: true },
@@ -206,16 +213,88 @@ const theme = createTheme({
                 },
             ],
         },
-
+        // ! Notificaciones
+        MuiAlert: {
+          defaultProps: {
+            iconMapping: {
+              warning: <ReportProblemIcon sx={{color: secondary.darkRed }}/>,
+              error: <CancelIcon/>,
+              success: <CheckCircleIcon/>,
+              info: <ErrorOutlineIcon/>,
+            },
+          },
+          variants: [
+            {
+              props: { severity: 'error', variant: 'outlined' },
+              style: {
+                background: secondary.lightRed,
+                border: `0.063em solid ${secondary.darkRed}`,
+              },
+            },
+            {
+              props: { severity: 'warning', variant: 'outlined'  },
+              style: {
+                background: states.lightOrange,
+                border: `0.063em solid ${secondary.baseRed}`,
+              },
+            },
+            {
+              props: { severity: 'info', variant: 'outlined' },
+              style: {
+                background: primary.lightBlue,
+                border: `0.063em solid ${primary.darkBlue}`,
+              },
+            },
+            {
+              props: { severity: 'success', variant: 'outlined' },
+              style: {
+                background: states.lightGreen,
+                border: `0.063em solid ${states.baseGreen}`,
+              },
+            }
+          ]
+        },
+        MuiAlertTitle: {
+          defaultProps: {
+            style: {
+                color: primary.black,
+                fontSize: '1em',
+                fontWeight: '400',
+                letterSpacing: '0',
+                lineHeight: '1.2',
+                display: 'flex',
+            }
+          },
+        },
+        // * Checkbox
+        MuiCheckbox: {
+          defaultProps: {
+            style: {
+              color: primary.gray1,
+            }
+          }
+        },
+        // * Radiobox
+        MuiRadio: {
+          defaultProps: {
+            style: {
+              color: primary.gray1,
+            }
+          }
+        },
 
 
         MuiFab: {
+          defaultProps: {
+            style: {
+              boxShadow: 'none',
+            }
+          },
           variants: [
             {
               props: { variant: 'extended' },
               style: {
-                width: "10em", 
-                height: "3em", 
+                padding: "0.563em 1.25em",
               },
             },
             {
@@ -232,14 +311,9 @@ const theme = createTheme({
     // * Breakpoints *
     breakpoints: {
       values: {
-        xs: 0,
-        sm: 640,
-        md: 768,
-        lg: 1024,
-        xl: 1280,
-        xxl: 1920,
-        xxxl: 2560,
-        xxxxl: 3200,
+        md: 1366, // 1366 x 768
+        lg: 1600, // 1600 x 900
+        xl: 1920, // 1920 x 1080
       },
     },
   });

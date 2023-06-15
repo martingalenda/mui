@@ -200,29 +200,39 @@ const SwitchMUI = () => {
 
           <br/>
 <Box sx={{display: 'flex', justifyContent: 'center', gap: 4, m: 5}}>
-  <Switch {...label} defaultChecked />
+{/*   <Switch {...label} defaultChecked />
   <Switch {...label} />
   <Switch {...label} disabled defaultChecked />
-  <Switch {...label} disabled />
+  <Switch {...label} disabled /> */}
 
   <FormGroup>
-    <FormControlLabel
+{/*     <FormControlLabel
     control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
     label="MUI switch"
-    />
+    /> */}
     <FormControlLabel
       control={<Android12Switch defaultChecked />}
       label="Android 12"
     />
     <FormControlLabel
+      control={<Android12Switch defaultChecked />}
+      label="Android 12"
+      disabled
+    />
+    <FormControlLabel
+      control={<Android12Switch />}
+      label="Android 12"
+      disabled
+    />
+{/*     <FormControlLabel
       control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
       label="iOS style"
-    />
-    <Stack direction="row" spacing={1} alignItems="center">
+    /> */}
+{/*     <Stack direction="row" spacing={1} alignItems="center">
       <Typography>Off</Typography>
       <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
       <Typography>On</Typography>
-    </Stack>
+    </Stack> */}
   </FormGroup>
 </Box>
         </>

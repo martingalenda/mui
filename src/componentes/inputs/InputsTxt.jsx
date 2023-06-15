@@ -5,16 +5,15 @@ import TextField from '@mui/material/TextField';
 const InputsTxt = () => {
     return (
         <>
-                  <br/>
-                  <br/>
-                  <Box
+          <br/>
+          <br/>
+          <Box
       component="form"
       sx={{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        
       }}
       noValidate
       autoComplete="off"
@@ -25,7 +24,7 @@ const InputsTxt = () => {
       <TextField id="standard-basic" label="Standard" variant="standard" />
     </Box>
     <br/>
-                  <br/>
+    <br/>
       <Box sx={{display: 'flex', gap: '2em'}}>
       <TextField
           id="standard-password-input"
@@ -34,7 +33,7 @@ const InputsTxt = () => {
           autoComplete="current-password"
           variant="standard"
         />
-                <TextField
+        <TextField
           id="standard-number"
           label="Number"
           type="number"
