@@ -20,13 +20,15 @@ const Buttons = () => {
           <Button variant="contained">Contained</Button>
           <Button variant="contained" startIcon={<SendIcon />}>Send</Button>
           <Button variant="contained" disabled>Disabled</Button>
+          <Button variant="contained" disabled startIcon={<SendIcon />}>Disabled</Button>
           {/* <Button variant="text">Text</Button> */}
           <Button variant="outlined">Outlined</Button>
-          <Button variant="outlined" disabled>Disabled</Button>
-          {/* <Button variant="gradient">Gradient</Button> */} {/* Version custom */}
           <Button variant="outlined" startIcon={<SendIcon />}>
             Send
           </Button>
+          <Button variant="outlined" disabled>Disabled</Button>
+          <Button variant="outlined" disabled startIcon={<SendIcon />}>Disabled</Button>
+          {/* <Button variant="gradient">Gradient</Button> */} {/* Version custom */}
           <IconButton color="primary" aria-label="add an alarm">
             <AlarmIcon />
           </IconButton>
@@ -36,13 +38,15 @@ const Buttons = () => {
           <Button color="secondary" variant="contained">Contained</Button>
           <Button color="secondary" variant="contained" startIcon={<SendIcon />}>Send</Button>
           <Button color="secondary" variant="contained" disabled>Disabled</Button>
+          <Button color="secondary" variant="contained" disabled startIcon={<SendIcon />}>Disabled</Button>
           {/* <Button variant="text">Text</Button> */}
           <Button color="secondary" variant="outlined">Outlined</Button>
-          <Button color="secondary" variant="outlined" disabled>Disabled</Button>
-          {/* <Button variant="gradient">Gradient</Button> */} {/* Version custom */}
           <Button color="secondary" variant="outlined" startIcon={<SendIcon />}>
             Send
           </Button>
+          <Button color="secondary" variant="outlined" disabled>Disabled</Button>
+          <Button color="secondary" variant="outlined" disabled startIcon={<SendIcon />}>Disabled</Button>
+          {/* <Button variant="gradient">Gradient</Button> */} {/* Version custom */}
           <IconButton color="secondary" aria-label="add an alarm">
             <AlarmIcon />
           </IconButton>
@@ -56,23 +60,32 @@ const Buttons = () => {
           <Box sx={{display: 'flex', justifyContent: 'center', gap: '1em', alignItems: 'center'}}>
                 <Typography variant="h3">Floating Action Button</Typography>
                 <Link style={{color: '#2e74d7'}} to="https://mui.com/material-ui/react-floating-action-button/" target="_blank" rel="noreferrer">Doc</Link>
-            </Box>
+          </Box>
 
           <br/>
           <br/>
           <Box sx={{display: 'flex', justifyContent: 'center', gap: 4, m: 5}}>
-            <Fab color="primary" size="large" aria-label="add">
+            <Fab color="primary" variant="circular" aria-label="add">
               <AddIcon />
             </Fab>
-            <Fab color="secondary" size="medium" aria-label="edit">
+            <Fab color="secondary"  size="medium" aria-label="edit">
               <EditIcon />
+            </Fab>
+            <Fab disabled aria-label="like">
+              <FavoriteIcon />
+            </Fab>
+            <Fab color="primary" variant="outlined" aria-label="add">
+              <AddIcon />
+            </Fab>
+            <Fab color="secondary" variant="outlined" aria-label="add">
+              <AddIcon />
+            </Fab>
+            <Fab disabled variant="outlined" aria-label="like">
+              <FavoriteIcon />
             </Fab>
             <Fab color="primary" variant="extended">
               <NavigationIcon sx={{ mr: 1 }} />
               Navigate
-            </Fab>
-            <Fab disabled aria-label="like">
-              <FavoriteIcon />
             </Fab>
           </Box>
         </Box>

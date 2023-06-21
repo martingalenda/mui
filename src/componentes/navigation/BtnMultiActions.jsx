@@ -23,7 +23,7 @@ const BtnMultiActions = () => {
     return (
         <>
             <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1}}>
-                <SpeedDial
+{/*                 <SpeedDial
                   ariaLabel="SpeedDial controlled open example"
                   sx={{ position: 'absolute', bottom: '1em', right: '0', left: '0' }}
                   icon={<SpeedDialIcon />}
@@ -39,7 +39,7 @@ const BtnMultiActions = () => {
                       onClick={handleClose}
                     />
                   ))}
-                </SpeedDial>
+                </SpeedDial> */}
             </Box>
         </>
     )

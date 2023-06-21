@@ -3,7 +3,7 @@ import SectionContainer from "../globals/SectionContainer"
 import AlertMUI from "../componentes/feedback/Alert";
 import DialogMUI from "../componentes/feedback/Dialog";
 import ProgressMUI from "../componentes/feedback/Progress";
-import NotificationsMUI from "../componentes/feedback/Notifications";
+/* import NotificationsMUI from "../componentes/feedback/Notifications"; */
 import { Link } from "react-router-dom"; // Enrutado
 import DialogConfirm from "../componentes/feedback/DialogConfirm";
 import DialogScroll from "../componentes/feedback/DialogScroll";
@@ -33,10 +33,10 @@ const FeedbackMUI = () => {
           <br/>
           <br/>
           <DialogConfirm/>
+{/*           <br/>
           <br/>
           <br/>
-          <br/>
-          <DialogScroll/>
+          <DialogScroll/> */}
           <br/>
           <br/>
           <br/>
@@ -51,7 +51,8 @@ const FeedbackMUI = () => {
           <ProgressMUI/>
           <br/>
           <br/>
-          <Divider/>
+
+{/*           <Divider/>
           <br/>
             <Box sx={{display: 'flex', justifyContent: 'center', gap: '1em', alignItems: 'center'}}>
             <Typography variant="h3" align="center">Notifications (Snackbar)</Typography>
@@ -62,8 +63,8 @@ const FeedbackMUI = () => {
           <NotificationsMUI/>
           <br/>
           <br/>
-          <br/>
-          <Divider/>
+          <br/> */}
+{/*           <Divider/>
           <br/>
           <br/>
           <Typography align="center">
@@ -72,8 +73,10 @@ const FeedbackMUI = () => {
                 <Link style={{color: '#2e74d7'}} to="https://mui.com/material-ui/react-backdrop/" target="_blank">Backdrop</Link> <br/>
           </Typography>
           <br/>
-          <br/>
+          <br/> */}
        </Box>
+       <br/>
+       <br/>
        </SectionContainer>
     )
 }

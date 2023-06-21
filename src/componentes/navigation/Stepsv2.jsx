@@ -27,14 +27,14 @@ const QontoConnector = styled(StepConnector)(({ theme }) => ({
     },
   },
   [`& .${stepConnectorClasses.line}`]: {
-    borderColor: theme.palette.mode === 'dark' ? theme.palette.grey[800] : '#eaeaf0',
+   /*  borderColor: theme.palette.mode === 'dark' ? theme.palette.grey[800] : '#eaeaf0', */
     borderTopWidth: 3,
     borderRadius: 1,
   },
 }));
 
 const QontoStepIconRoot = styled('div')(({ theme, ownerState }) => ({
-  color: theme.palette.mode === 'dark' ? theme.palette.grey[700] : '#eaeaf0',
+/*   color: theme.palette.mode === 'dark' ? theme.palette.grey[700] : '#eaeaf0', */
   display: 'flex',
   height: 22,
   alignItems: 'center',
@@ -101,14 +101,14 @@ const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`& .${stepConnectorClasses.line}`]: {
     height: 3,
     border: 0,
-    backgroundColor:
-      theme.palette.mode === 'dark' ? theme.palette.grey[800] : '#eaeaf0',
+/*     backgroundColor:
+      theme.palette.mode === 'dark' ? theme.palette.grey[800] : '#eaeaf0', */
     borderRadius: 1,
   },
 }));
 
 const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? theme.palette.grey[700] : '#ccc',
+/*   backgroundColor: theme.palette.mode === 'dark' ? theme.palette.grey[700] : '#ccc', */
   zIndex: 1,
   color: '#fff',
   width: 50,

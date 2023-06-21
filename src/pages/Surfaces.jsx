@@ -20,7 +20,7 @@ const Surface = () => {
           <br/>
           <br/>
           <Divider/>
-          <br/>
+{/*           <br/>
             <Box sx={{display: 'flex', justifyContent: 'center', gap: '1em', alignItems: 'center'}}>
             <Typography variant="h3" align="center">App Bar</Typography>
                 <Link style={{color: '#2e74d7'}} to="https://mui.com/material-ui/react-app-bar/" target="_blank">Doc</Link>
@@ -30,7 +30,7 @@ const Surface = () => {
           <AppBarMUI/>
           <br/>
           <br/>
-          <Divider/>
+          <Divider/> */}
           <br/>
             <Box sx={{display: 'flex', justifyContent: 'center', gap: '1em', alignItems: 'center'}}>
             <Typography variant="h3" align="center">Card</Typography>

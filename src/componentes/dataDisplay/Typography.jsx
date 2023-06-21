@@ -34,9 +34,9 @@ const TypographyMUI = () => {
 {/*             <Typography variant="caption"> Caption </Typography>
             <br/>
             <Typography variant="overline"> Overline </Typography> */}
+{/*             <br/>
             <br/>
-            <br/>
-            <Typography variant="h1" component="p"> Parrafo con apariencia de H1 </Typography>
+            <Typography variant="h1" component="p"> Parrafo con apariencia de H1 </Typography> */}
         </Box>
     )
 }

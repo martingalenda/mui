@@ -108,7 +108,7 @@ const Navigation = () => {
             <StepsMUI/>
             <br/>
             <br/>
-            <StepsV2/>
+           {/*  <StepsV2/> */}
             <br/>
             <br/>
             <br/>

@@ -1,8 +1,8 @@
 import { Typography, Box, Divider } from "@mui/material"
 import AvatarMUI from "../componentes/dataDisplay/Avatar"
 import BadgeMUI from "../componentes/dataDisplay/Badge"
-import DividerMUI from "../componentes/dataDisplay/Divider"
-import ListMUI from "../componentes/dataDisplay/List"
+/* import DividerMUI from "../componentes/dataDisplay/Divider" */
+/* import ListMUI from "../componentes/dataDisplay/List" */
 import TableMUI from "../componentes/dataDisplay/Table"
 import TooltipMUI from "../componentes/dataDisplay/Tooltip"
 import TypographyMUI from "../componentes/dataDisplay/Typography"
@@ -35,7 +35,7 @@ const DataDisplay = () => {
           <BadgeMUI/>
           <br/>
           <br/>
-          <Divider/>
+{/*           <Divider/>
           <br/>
             <Box sx={{display: 'flex', justifyContent: 'center', gap: '1em', alignItems: 'center'}}>
             <Typography variant="h3" align="center">Divider</Typography>
@@ -45,8 +45,8 @@ const DataDisplay = () => {
           <br/>
           <DividerMUI/>
           <br/>
-          <br/>
-          <Divider/>
+          <br/> */}
+{/*           <Divider/>
           <br/>
             <Box sx={{display: 'flex', justifyContent: 'center', gap: '1em', alignItems: 'center'}}>
             <Typography variant="h3" align="center">List</Typography>
@@ -56,7 +56,7 @@ const DataDisplay = () => {
           <br/>
           <ListMUI/>
           <br/>
-          <br/>
+          <br/> */}
           <Divider/>
           <br/>
             <Box sx={{display: 'flex', justifyContent: 'center', gap: '1em', alignItems: 'center'}}>
@@ -93,15 +93,15 @@ const DataDisplay = () => {
           <TypographyMUI/>
           <br/>
           <br/>
-          <Divider/>
-          <br/>
+  {/*        <Divider/>
+           <br/>
 
           <Typography align="center">
           Existen más relacionados a esta tematica, como ser: <br/> <br/>
                 <Link style={{color: '#2e74d7'}} to="https://mui.com/material-ui/react-chip/" target="_blank">Chip</Link> <br/>
                 <Link style={{color: '#2e74d7'}} to="https://mui.com/material-ui/icons/" target="_blank">Icons</Link> <br/>
                 <Link style={{color: '#2e74d7'}} to="https://mui.com/material-ui/material-icons/" target="_blank">Material Icons</Link> <br/>
-          </Typography>
+          </Typography> */}
           
           <br/>
           <br/>

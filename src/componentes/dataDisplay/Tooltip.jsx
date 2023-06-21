@@ -1,10 +1,11 @@
-import {Box, Button, Tooltip, IconButton, ClickAwayListener} from '@mui/material';
-import {useState} from 'react'
+import {Box, Button, Tooltip, IconButton/* , ClickAwayListener */} from '@mui/material';
+/* import {useState} from 'react' */
 import DeleteIcon from '@mui/icons-material/Delete';
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 const TooltipMUI = () => {
 
-    const [open, setOpen] = useState(false);
+/*     const [open, setOpen] = useState(false);
     
     const handleTooltipClose = () => {
       setOpen(false);
@@ -12,7 +13,7 @@ const TooltipMUI = () => {
 
     const handleTooltipOpen = () => {
       setOpen(true);
-    };
+    }; */
 
     return (
         <>
@@ -24,7 +25,7 @@ const TooltipMUI = () => {
             </Tooltip>
 
             <br/>
-          <ClickAwayListener onClickAway={handleTooltipClose}>
+{/*           <ClickAwayListener onClickAway={handleTooltipClose}>
 
               <Tooltip
                 PopperProps={{
@@ -40,23 +41,23 @@ const TooltipMUI = () => {
                 <Button onClick={handleTooltipOpen}> Click Me </Button>
               </Tooltip>
 
-          </ClickAwayListener>
+          </ClickAwayListener> */}
           <br/>
           <br/>
           <Box>
-            <Tooltip title="Left Mid" placement="left">
+            <Tooltip title={<span><ErrorOutlineIcon/> Left Mid</span>} placement="left" arrow>
               <Button>left</Button>
             </Tooltip>
-            <Tooltip title="Top Start" placement="top-start">
+            <Tooltip title={<span><ErrorOutlineIcon/> Top Start</span>} placement="top-start" arrow>
               <Button>top-start</Button>
             </Tooltip>
-            <Tooltip title="Bottom Mid" placement="bottom">
+            <Tooltip title={<span><ErrorOutlineIcon/> Bottom Mid</span>} placement="bottom" arrow>
               <Button>bottom</Button>
             </Tooltip>
-            <Tooltip title="Top End" placement="top-end">
+            <Tooltip title={<span><ErrorOutlineIcon/> Top End</span>} placement="top-end" arrow>
               <Button>top-end</Button>
             </Tooltip>
-            <Tooltip title="Right Mid" placement="right">
+            <Tooltip title={<span><ErrorOutlineIcon/> Right Mid</span>} placement="right" arrow>
               <Button>right</Button>
             </Tooltip>
           </Box>

@@ -12,6 +12,7 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 const theme = createTheme({
+
     // * Colores *
     palette: {
       mode: 'light',
@@ -159,9 +160,9 @@ const theme = createTheme({
         }
     },
 
-    // * Componentes *
+
     components: {
-        // ! Botones
+        // * Botones Txt || Txt + Icon
         MuiButton: {
             defaultProps: {
                 style: {
@@ -213,7 +214,90 @@ const theme = createTheme({
                 },
             ],
         },
-        // ! Notificaciones
+
+        // * Botones Icon
+        MuiFab: {
+          defaultProps: {
+            style: {
+              boxShadow: 'none',
+            }
+          },
+          styleOverrides: {
+            circular: ({ theme: currentTheme, ownerState }) => ({
+              ...(ownerState.color && ownerState.color !== 'inherit' && !ownerState.disabled && {
+                '&:hover': {
+                  backgroundColor: currentTheme.palette[ownerState.color].dark,
+                  color: primary.white,
+                },
+                '&:focus': {
+                  background: currentTheme.palette[ownerState.color].main,
+                  color: primary.main,
+                  border: `0.188em solid ${currentTheme.palette[ownerState.color].dark} !important`,
+                },
+              })
+            }),
+            outlined: ({ theme: currentTheme, ownerState }) => ({
+              ...(ownerState.color && ownerState.color !== 'inherit' && !ownerState.disabled && {
+                '&.MuiFab-root': {
+                  border: `0.063em solid ${currentTheme.palette[ownerState.color].main}`,
+                  color: currentTheme.palette[ownerState.color].main,
+                },
+                '&:hover': {
+                  backgroundColor: currentTheme.palette[ownerState.color].main,
+                  color: primary.white,
+                },
+                '&:focus': {
+                  background: 'none',
+                  color: currentTheme.palette[ownerState.color].main,
+                  border: `0.188em solid ${currentTheme.palette[ownerState.color].dark}`,
+                },
+              }),
+              ...(ownerState.disabled && ownerState.variant === "outlined" && {
+                '&.MuiFab-root': {
+                  background: 'none',
+                  border: `0.063em solid ${primary.gray3}`,
+                  color: `${primary.gray3} !important`,
+                }
+              }),
+              
+            }),
+          },
+          variants: [
+            {
+              props: { variant: 'extended' },
+              style: {
+                padding: "0.563em 1.25em",
+              },
+            },
+            {
+              props: { variant: 'circular' },
+              style: {
+                width: "3em",
+                height: "3em",
+                borderRadius: '0.313em',
+              },
+            },
+            {
+              props: { variant: 'outlined' },
+              style: {
+                width: "3em",
+                height: "3em",
+                borderRadius: '0.313em',
+                background: 'none'
+              },
+            },
+            {
+              props: { disabled: true },
+              style: {
+                color: `${primary.white} !important`,
+                background: primary.gray3
+              },
+            },
+          ],
+        },
+
+
+        // * Notificaciones / Alertas
         MuiAlert: {
           defaultProps: {
             iconMapping: {
@@ -266,14 +350,10 @@ const theme = createTheme({
             }
           },
         },
+
         // * Checkbox
-        MuiCheckbox: {
-          defaultProps: {
-            style: {
-              color: primary.gray1,
-            }
-          }
-        },
+
+
         // * Radiobox
         MuiRadio: {
           defaultProps: {
@@ -283,29 +363,54 @@ const theme = createTheme({
           }
         },
 
-
-        MuiFab: {
-          defaultProps: {
-            style: {
-              boxShadow: 'none',
-            }
+        // * Switch
+        MuiSwitch: {
+          styleOverrides: {
+            root: {
+              '& .MuiSwitch-input': {
+                backgroundColor: primary.black,
+              },
+              '& .MuiSwitch-thumb': {
+                backgroundColor: primary.white,
+                width: '1em',
+                height: '1em',
+              },
+              '& .MuiSwitch-track': {
+                backgroundColor: primary.black,
+                opacity: 1,
+                height: '1.042em',
+                width: '2.083em'
+              },
+              '& .css-14qw32j-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track': {
+                backgroundColor: primary.instBlue,
+                opacity: 1,
+              },
+            },
           },
-          variants: [
-            {
-              props: { variant: 'extended' },
-              style: {
-                padding: "0.563em 1.25em",
-              },
-            },
-            {
-              props: { variant: 'circular' },
-              style: {
-                width: "3em",
-                height: "3em",
-              },
-            },
-          ],
         },
+
+
+        // * Tooltip
+        MuiTooltip: {
+          styleOverrides: {
+            tooltip: {
+              backgroundColor: primary.black,
+              '& .MuiSvgIcon-root': {
+                width: '0.833em',
+                height: '0.833em',
+              },
+              '& span': {
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5em',
+              },
+            },
+            arrow: {
+              color: primary.black,
+            },
+          },
+        }
+
     },
 
     // * Breakpoints *
@@ -320,10 +425,10 @@ const theme = createTheme({
 
 export const ThemeConfig = ({children}) => {
     return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
-            {children}
-        </ThemeProvider>
+      <ThemeProvider theme={theme}>
+          <CssBaseline />
+          {children}
+      </ThemeProvider>
     )
 }
 
